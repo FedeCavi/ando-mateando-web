@@ -3,8 +3,8 @@
 import type React from "react"
 
 import { useState } from "react"
-import { useRouter } from "next/navigation"
-import { Eye, EyeOff } from "lucide-react"
+import { useRouter } from 'next/navigation'
+import { Eye, EyeOff } from 'lucide-react'
 import { createClient } from "@/utils/supabase/client"
 
 export default function LoginPage() {
@@ -121,6 +121,17 @@ export default function LoginPage() {
               {isLoading ? "Iniciando sesión..." : "Iniciar sesión"}
             </button>
           </form>
+
+          {/* Forgot Password Link */}
+          <div className="mt-3 text-center">
+            <button
+              type="button"
+              onClick={() => router.push("/forgot-password")}
+              className="text-sm text-gray-600 hover:text-[#d97706]"
+            >
+              ¿Olvidaste tu contraseña?
+            </button>
+          </div>
 
           {/* Divider */}
           <div className="flex items-center my-6">

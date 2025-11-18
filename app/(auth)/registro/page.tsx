@@ -7,8 +7,8 @@ import { createClient } from "@/utils/supabase/client"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Eye, EyeOff } from "lucide-react"
-import { useRouter } from "next/navigation"
+import { Eye, EyeOff } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 
 export default function RegistroPage() {
   const [email, setEmail] = useState("")
@@ -129,6 +129,16 @@ export default function RegistroPage() {
           >
             {loading ? "Creando cuenta..." : "Crear cuenta"}
           </Button>
+
+          <div className="text-center mt-3">
+            <button
+              type="button"
+              onClick={() => router.push("/forgot-password")}
+              className="text-sm text-muted-foreground hover:text-foreground"
+            >
+              ¿Olvidaste tu contraseña?
+            </button>
+          </div>
 
           <div className="text-center">
             <button
