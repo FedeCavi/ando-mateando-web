@@ -2,13 +2,12 @@
 
 import type React from "react"
 import { useState, useEffect, Suspense } from "react"
-import { useRouter, useSearchParams } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import { Eye, EyeOff } from 'lucide-react'
 import { createClient } from "@/utils/supabase/client"
 
 function ResetPasswordContent() {
   const router = useRouter()
-  const searchParams = useSearchParams()
   const [password, setPassword] = useState("")
   const [confirmPassword, setConfirmPassword] = useState("")
   const [showPassword, setShowPassword] = useState(false)
@@ -87,7 +86,7 @@ function ResetPasswordContent() {
       <div className="min-h-screen flex items-center justify-center bg-[#faf6f3] p-4">
         <div className="w-full max-w-md">
           <div className="bg-white rounded-2xl shadow-lg p-8">
-            <h1 className="text-3xl font-bold text-center mb-8 text-[#2b1810]">Ventas App</h1>
+            <h1 className="text-3xl font-bold text-center mb-8 text-[#2b1810]">AndoVendiendo</h1>
             <p className="text-center text-gray-600">Cargando...</p>
           </div>
         </div>
@@ -100,7 +99,7 @@ function ResetPasswordContent() {
       <div className="min-h-screen flex items-center justify-center bg-[#faf6f3] p-4">
         <div className="w-full max-w-md">
           <div className="bg-white rounded-2xl shadow-lg p-8">
-            <h1 className="text-3xl font-bold text-center mb-8 text-[#2b1810]">Ventas App</h1>
+            <h1 className="text-3xl font-bold text-center mb-8 text-[#2b1810]">AndoVendiendo</h1>
             <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm mb-4">
               El enlace de recuperación es inválido o ha expirado.
             </div>
@@ -121,7 +120,7 @@ function ResetPasswordContent() {
       <div className="w-full max-w-md">
         <div className="bg-white rounded-2xl shadow-lg p-8">
           {/* Title */}
-          <h1 className="text-3xl font-bold text-center mb-2 text-[#2b1810]">Ventas App</h1>
+          <h1 className="text-3xl font-bold text-center mb-2 text-[#2b1810]">AndoVendiendo</h1>
           <p className="text-center text-gray-600 text-sm mb-8">Crear nueva contraseña</p>
 
           {/* Reset Password Form */}
@@ -213,7 +212,7 @@ export default function ResetPasswordPage() {
       <div className="min-h-screen flex items-center justify-center bg-[#faf6f3] p-4">
         <div className="w-full max-w-md">
           <div className="bg-white rounded-2xl shadow-lg p-8">
-            <h1 className="text-3xl font-bold text-center mb-8 text-[#2b1810]">Ventas App</h1>
+            <h1 className="text-3xl font-bold text-center mb-8 text-[#2b1810]">AndoVendiendo</h1>
             <p className="text-center text-gray-600">Cargando...</p>
           </div>
         </div>

@@ -1,24 +1,10 @@
 "use client"
 
 import Link from "next/link"
-import { usePathname } from "next/navigation"
-import {
-  LayoutDashboard,
-  Package,
-  Layers,
-  ShoppingCart,
-  Truck,
-  DollarSign,
-  Users,
-  UserCog,
-  User,
-  LogOut,
-  ChevronLeft,
-  ChevronRight,
-  X,
-} from "lucide-react"
+import { usePathname } from 'next/navigation'
+import { LayoutDashboard, Package, Layers, ShoppingCart, Truck, DollarSign, Users, UserCog, User, LogOut, ChevronLeft, ChevronRight, X } from 'lucide-react'
 import { createClient } from "@/utils/supabase/client"
-import { useRouter } from "next/navigation"
+import { useRouter } from 'next/navigation'
 
 const menuItems = [
   { name: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
@@ -69,7 +55,7 @@ export function Sidebar({
     >
       {/* Logo/Title */}
       <div className="p-6 flex items-center justify-between">
-        {!isCollapsed && <h1 className="text-2xl font-bold">Ventas App</h1>}
+        {!isCollapsed && <h1 className="text-2xl font-bold">AndoVendiendo</h1>}
         <button
           onClick={onToggle}
           className="p-1 rounded hover:bg-white/10 transition-colors ml-auto"
@@ -133,7 +119,7 @@ export function Sidebar({
         <div className="flex h-screen flex-col">
           {/* Header with close button */}
           <div className="p-6 flex items-center justify-between">
-            <h1 className="text-2xl font-bold">Ventas App</h1>
+            <h1 className="text-2xl font-bold">AndoVendiendo</h1>
             <button
               onClick={onMobileClose}
               className="p-1 rounded hover:bg-white/10 transition-colors"

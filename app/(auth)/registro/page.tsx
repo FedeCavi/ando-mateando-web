@@ -4,9 +4,6 @@ import type React from "react"
 
 import { useState } from "react"
 import { createClient } from "@/utils/supabase/client"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
 import { Eye, EyeOff } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 
@@ -61,80 +58,80 @@ export default function RegistroPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background p-4">
-      <div className="w-full max-w-md bg-card rounded-2xl shadow-xl p-8">
-        <h1 className="text-4xl font-bold text-center mb-8 text-foreground">Ventas App</h1>
+    <div className="min-h-screen flex items-center justify-center bg-[#faf6f3] p-4">
+      <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
+        <h1 className="text-4xl font-bold text-center mb-8 text-[#2b1810]">AndoVendiendo</h1>
 
         <form onSubmit={handleSignUp} className="space-y-6">
-          <div className="space-y-2">
-            <Label htmlFor="name" className="text-muted-foreground">
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium text-[#2b1810] mb-2">
               Nombre
-            </Label>
-            <Input
+            </label>
+            <input
               id="name"
               type="text"
               placeholder="Ingresá tu nombre"
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
-              className="bg-background border-border"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#d97706] focus:border-transparent text-[#2b1810] placeholder:text-gray-400"
             />
           </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="email" className="text-muted-foreground">
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-[#2b1810] mb-2">
               Email
-            </Label>
-            <Input
+            </label>
+            <input
               id="email"
               type="email"
               placeholder="Ingresá tu mail"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="bg-background border-border"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#d97706] focus:border-transparent text-[#2b1810] placeholder:text-gray-400"
             />
           </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="password" className="text-muted-foreground">
+          <div>
+            <label htmlFor="password" className="block text-sm font-medium text-[#2b1810] mb-2">
               Contraseña
-            </Label>
+            </label>
             <div className="relative">
-              <Input
+              <input
                 id="password"
                 type={showPassword ? "text" : "password"}
                 placeholder="Ingresá tu contraseña"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="bg-background border-border pr-10"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#d97706] focus:border-transparent text-[#2b1810] placeholder:text-gray-400"
               />
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
               >
-                {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+                {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
               </button>
             </div>
           </div>
 
-          {error && <div className="text-red-500 text-sm text-center bg-red-500/10 p-3 rounded-lg">{error}</div>}
+          {error && <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">{error}</div>}
 
-          <Button
+          <button
             type="submit"
             disabled={loading}
-            className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-6 rounded-xl"
+            className="w-full bg-[#d97706] hover:bg-[#b45309] text-white font-semibold py-3 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {loading ? "Creando cuenta..." : "Crear cuenta"}
-          </Button>
+          </button>
 
           <div className="text-center mt-3">
             <button
               type="button"
               onClick={() => router.push("/forgot-password")}
-              className="text-sm text-muted-foreground hover:text-foreground"
+              className="text-sm text-gray-600 hover:text-[#d97706]"
             >
               ¿Olvidaste tu contraseña?
             </button>
@@ -144,9 +141,9 @@ export default function RegistroPage() {
             <button
               type="button"
               onClick={() => router.push("/login")}
-              className="text-sm text-muted-foreground hover:text-foreground"
+              className="text-sm text-gray-600 hover:text-[#d97706]"
             >
-              ¿Ya tenés cuenta? <span className="text-primary">Iniciá sesión</span>
+              ¿Ya tenés cuenta? <span className="font-semibold text-[#d97706]">Iniciá sesión</span>
             </button>
           </div>
         </form>

@@ -4,7 +4,7 @@
 
 -- Insert company data
 INSERT INTO company (name, location, instagram, email, phone, seller_comision_min, seller_comision_may)
-VALUES ('Ventas App Store', 'Buenos Aires, Argentina', '@ventasapp', 'contacto@ventasapp.com', '+54 11 1234-5678', 5.00, 7.50);
+VALUES ('AndoVendiendo Store', 'Buenos Aires, Argentina', '@andovendiendo', 'contacto@andovendiendo.com', '+54 11 1234-5678', 5.00, 7.50);
 
 -- Insert clients
 INSERT INTO client (full_name, phone, dni, email, details) VALUES

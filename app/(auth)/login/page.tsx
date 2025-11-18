@@ -63,7 +63,7 @@ export default function LoginPage() {
       <div className="w-full max-w-md">
         <div className="bg-white rounded-2xl shadow-lg p-8">
           {/* Title */}
-          <h1 className="text-3xl font-bold text-center mb-8 text-[#2b1810]">Ventas App</h1>
+          <h1 className="text-3xl font-bold text-center mb-8 text-[#2b1810]">AndoVendiendo</h1>
 
           {/* Login Form */}
           <form onSubmit={handleLogin} className="space-y-6">
